@@ -1,0 +1,1103 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>ALIAROH | علي عروة</title>
+
+<meta name="description" content="علي عروة — تطوير علامات تجارية وحلول إدارة الأعمال">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@400;500;600;700;800&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --bg:#f7f9fc;
+  --card:#ffffff;
+  --text:#0a1020;
+  --muted:#687386;
+  --line:#e4e8ef;
+  --blue:#1769ff;
+  --blue2:#0b4fd8;
+  --navy:#08152d;
+  --shadow:0 20px 60px rgba(10,25,55,.08);
+}
+
+*{
+  box-sizing:border-box;
+  margin:0;
+  padding:0;
+}
+
+html{
+  scroll-behavior:smooth;
+}
+
+body{
+  font-family:"Cairo",sans-serif;
+  background:var(--bg);
+  color:var(--text);
+  line-height:1.8;
+}
+
+a{
+  color:inherit;
+  text-decoration:none;
+}
+
+.container{
+  width:min(1150px,92%);
+  margin:auto;
+}
+
+/* NAVBAR */
+
+header{
+  position:sticky;
+  top:0;
+  z-index:1000;
+  background:rgba(247,249,252,.88);
+  backdrop-filter:blur(18px);
+  border-bottom:1px solid var(--line);
+}
+
+.nav{
+  min-height:75px;
+  display:flex;
+  align-items:center;
+  justify-content:space-between;
+  gap:20px;
+}
+
+.logo{
+  font-family:"Montserrat",sans-serif;
+  font-size:24px;
+  font-weight:800;
+  letter-spacing:2px;
+  color:var(--navy);
+}
+
+.logo span{
+  color:var(--blue);
+}
+
+nav{
+  display:flex;
+  align-items:center;
+  gap:25px;
+}
+
+nav a{
+  font-size:14px;
+  font-weight:600;
+  color:var(--muted);
+  transition:.25s;
+}
+
+nav a:hover{
+  color:var(--blue);
+}
+
+.actions{
+  display:flex;
+  gap:8px;
+}
+
+.icon-btn{
+  width:40px;
+  height:40px;
+  border:1px solid var(--line);
+  background:var(--card);
+  border-radius:12px;
+  cursor:pointer;
+  font-size:14px;
+}
+
+/* HERO */
+
+.hero{
+  min-height:650px;
+  display:grid;
+  grid-template-columns:1.1fr .9fr;
+  align-items:center;
+  gap:60px;
+  padding:90px 0;
+}
+
+.eyebrow{
+  color:var(--blue);
+  font-size:13px;
+  font-weight:800;
+  letter-spacing:1px;
+  margin-bottom:15px;
+}
+
+.hero h1{
+  font-family:"Montserrat","Cairo",sans-serif;
+  font-size:clamp(55px,8vw,105px);
+  line-height:.95;
+  letter-spacing:-4px;
+  margin-bottom:25px;
+}
+
+.hero h1 span{
+  color:var(--blue);
+}
+
+.hero h2{
+  font-size:25px;
+  line-height:1.5;
+  margin-bottom:18px;
+}
+
+.hero p{
+  max-width:600px;
+  color:var(--muted);
+  font-size:16px;
+}
+
+.buttons{
+  display:flex;
+  flex-wrap:wrap;
+  gap:12px;
+  margin-top:30px;
+}
+
+.btn{
+  display:inline-flex;
+  align-items:center;
+  justify-content:center;
+  padding:13px 24px;
+  border-radius:13px;
+  font-weight:700;
+  border:1px solid var(--line);
+  transition:.25s;
+}
+
+.btn-primary{
+  background:var(--navy);
+  color:white;
+}
+
+.btn-primary:hover{
+  background:var(--blue);
+  transform:translateY(-2px);
+}
+
+.btn-light{
+  background:white;
+}
+
+.btn-light:hover{
+  border-color:var(--blue);
+  color:var(--blue);
+}
+
+.portrait{
+  min-height:480px;
+  border-radius:30px;
+  background:
+    radial-gradient(circle at 70% 20%,rgba(23,105,255,.35),transparent 35%),
+    linear-gradient(145deg,#101d35,#050a14);
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  position:relative;
+  overflow:hidden;
+  box-shadow:var(--shadow);
+}
+
+.portrait::before{
+  content:"";
+  position:absolute;
+  width:280px;
+  height:280px;
+  border:1px solid rgba(255,255,255,.15);
+  border-radius:50%;
+}
+
+.portrait-label{
+  color:white;
+  text-align:center;
+  z-index:2;
+}
+
+.portrait-label strong{
+  display:block;
+  font-family:"Montserrat",sans-serif;
+  font-size:42px;
+  letter-spacing:3px;
+}
+
+.portrait-label small{
+  color:#aebbd1;
+}
+
+/* SECTION */
+
+section{
+  padding:100px 0;
+}
+
+.section-head{
+  margin-bottom:45px;
+}
+
+.section-label{
+  color:var(--blue);
+  font-size:12px;
+  font-weight:800;
+  text-transform:uppercase;
+  letter-spacing:1px;
+}
+
+.section-head h2{
+  font-size:42px;
+  line-height:1.3;
+  margin-top:8px;
+}
+
+.section-head p{
+  color:var(--muted);
+  max-width:650px;
+  margin-top:10px;
+}
+
+/* ABOUT */
+
+.about{
+  display:grid;
+  grid-template-columns:.8fr 1.2fr;
+  gap:60px;
+  align-items:center;
+}
+
+.about-card{
+  background:var(--navy);
+  color:white;
+  border-radius:28px;
+  min-height:350px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  padding:30px;
+}
+
+.about-card strong{
+  font-family:"Montserrat",sans-serif;
+  font-size:55px;
+  letter-spacing:2px;
+}
+
+.about-text p{
+  color:var(--muted);
+  margin-bottom:18px;
+}
+
+/* STATS */
+
+.stats{
+  display:grid;
+  grid-template-columns:repeat(5,1fr);
+  gap:15px;
+}
+
+.stat{
+  background:var(--card);
+  border:1px solid var(--line);
+  border-radius:20px;
+  padding:25px 15px;
+  text-align:center;
+}
+
+.stat strong{
+  display:block;
+  font-family:"Montserrat",sans-serif;
+  font-size:36px;
+  color:var(--blue);
+}
+
+.stat span{
+  font-size:13px;
+  color:var(--muted);
+}
+
+/* SERVICES */
+
+.services{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:18px;
+}
+
+.service{
+  background:var(--card);
+  border:1px solid var(--line);
+  padding:30px;
+  border-radius:22px;
+  transition:.3s;
+}
+
+.service:hover{
+  transform:translateY(-6px);
+  box-shadow:var(--shadow);
+  border-color:#cbd8f4;
+}
+
+.service-number{
+  font-family:"Montserrat",sans-serif;
+  color:var(--blue);
+  font-size:13px;
+  font-weight:800;
+}
+
+.service h3{
+  margin:12px 0 8px;
+  font-size:21px;
+}
+
+.service p{
+  color:var(--muted);
+  font-size:14px;
+}
+
+/* PROJECTS */
+
+.projects{
+  display:grid;
+  grid-template-columns:repeat(2,1fr);
+  gap:22px;
+}
+
+.project{
+  min-height:280px;
+  border-radius:25px;
+  padding:30px;
+  color:white;
+  background:linear-gradient(135deg,#07152e,#1769ff);
+  position:relative;
+  overflow:hidden;
+}
+
+.project:nth-child(2){
+  background:linear-gradient(135deg,#101827,#273c63);
+}
+
+.project:nth-child(3){
+  background:linear-gradient(135deg,#071b28,#087fa8);
+}
+
+.project:nth-child(4){
+  background:linear-gradient(135deg,#10131b,#333c50);
+}
+
+.project small{
+  opacity:.65;
+}
+
+.project h3{
+  font-family:"Montserrat","Cairo",sans-serif;
+  font-size:34px;
+  margin-top:80px;
+  direction:ltr;
+  text-align:left;
+}
+
+.project p{
+  opacity:.75;
+}
+
+/* SYSTEMS */
+
+.systems{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:15px;
+}
+
+.system{
+  padding:20px;
+  background:white;
+  border:1px solid var(--line);
+  border-radius:16px;
+  font-weight:600;
+}
+
+/* WHY */
+
+.why{
+  background:var(--navy);
+  color:white;
+  border-radius:30px;
+  padding:60px;
+}
+
+.why-grid{
+  display:grid;
+  grid-template-columns:repeat(3,1fr);
+  gap:25px;
+  margin-top:40px;
+}
+
+.why-item{
+  border-top:1px solid rgba(255,255,255,.18);
+  padding-top:20px;
+}
+
+.why-item h3{
+  margin-bottom:8px;
+}
+
+.why-item p{
+  color:#aebbd1;
+  font-size:14px;
+}
+
+/* CONTACT */
+
+.contact{
+  display:grid;
+  grid-template-columns:1fr 1fr;
+  gap:50px;
+  align-items:start;
+}
+
+.contact-info p{
+  color:var(--muted);
+}
+
+.contact-list{
+  margin-top:25px;
+  display:grid;
+  gap:12px;
+}
+
+.contact-item{
+  background:white;
+  border:1px solid var(--line);
+  border-radius:15px;
+  padding:15px 18px;
+}
+
+.socials{
+  display:flex;
+  gap:10px;
+  flex-wrap:wrap;
+  margin-top:25px;
+}
+
+.social{
+  width:44px;
+  height:44px;
+  border:1px solid var(--line);
+  border-radius:13px;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  font-family:"Montserrat",sans-serif;
+  font-size:13px;
+  font-weight:700;
+  background:white;
+  transition:.2s;
+}
+
+.social:hover{
+  background:var(--blue);
+  color:white;
+}
+
+form{
+  background:white;
+  padding:30px;
+  border:1px solid var(--line);
+  border-radius:24px;
+}
+
+input,textarea{
+  width:100%;
+  padding:14px;
+  border:1px solid var(--line);
+  border-radius:12px;
+  margin-bottom:12px;
+  font-family:inherit;
+  outline:none;
+}
+
+input:focus,textarea:focus{
+  border-color:var(--blue);
+}
+
+textarea{
+  min-height:130px;
+  resize:vertical;
+}
+
+/* FOOTER */
+
+footer{
+  padding:30px 0;
+  border-top:1px solid var(--line);
+  color:var(--muted);
+  font-size:13px;
+}
+
+.footer{
+  display:flex;
+  justify-content:space-between;
+  gap:20px;
+}
+
+/* DARK MODE */
+
+body.dark{
+  --bg:#050a14;
+  --card:#0b1220;
+  --text:#f5f7fb;
+  --muted:#9aa7bb;
+  --line:#1b2940;
+  --navy:#f5f7fb;
+}
+
+body.dark header{
+  background:rgba(5,10,20,.88);
+}
+
+body.dark .logo{
+  color:white;
+}
+
+body.dark .btn-primary{
+  background:white;
+  color:#07101f;
+}
+
+body.dark .btn-light,
+body.dark form,
+body.dark .contact-item,
+body.dark .social{
+  background:#0b1220;
+}
+
+body.dark .portrait{
+  background:linear-gradient(145deg,#172746,#03060d);
+}
+
+body.dark .system{
+  background:#0b1220;
+}
+
+body.dark .project{
+  color:white;
+}
+
+/* MOBILE */
+
+@media(max-width:850px){
+
+  nav{
+    display:none;
+  }
+
+  .hero{
+    grid-template-columns:1fr;
+    padding:60px 0;
+  }
+
+  .portrait{
+    min-height:390px;
+  }
+
+  .about,
+  .contact{
+    grid-template-columns:1fr;
+  }
+
+  .stats{
+    grid-template-columns:repeat(2,1fr);
+  }
+
+  .services,
+  .systems,
+  .why-grid{
+    grid-template-columns:1fr;
+  }
+
+  .projects{
+    grid-template-columns:1fr;
+  }
+
+  .why{
+    padding:35px 25px;
+  }
+
+  .section-head h2{
+    font-size:34px;
+  }
+
+  .hero h1{
+    font-size:62px;
+  }
+
+  .footer{
+    flex-direction:column;
+  }
+}
+</style>
+</head>
+
+<body>
+
+<header>
+  <div class="container nav">
+
+    <a href="#" class="logo">
+      ALI<span>AROH</span>
+    </a>
+
+    <nav>
+      <a href="#home">الرئيسية</a>
+      <a href="#services">خدماتي</a>
+      <a href="#work">أعمالي</a>
+      <a href="#about">من أنا</a>
+      <a href="#contact">تواصل معي</a>
+    </nav>
+
+    <div class="actions">
+      <button class="icon-btn" onclick="toggleLanguage()">EN</button>
+      <button class="icon-btn" onclick="toggleTheme()">◐</button>
+    </div>
+
+  </div>
+</header>
+
+
+<main>
+
+<!-- HERO -->
+
+<section class="container hero" id="home">
+
+  <div>
+
+    <div class="eyebrow">BRAND • MARKETING • BUSINESS SOLUTIONS</div>
+
+    <h1>ALI<br><span>AROH</span></h1>
+
+    <h2>تطوير علامات تجارية وحلول إدارة الأعمال</h2>
+
+    <p>
+      أساعد المشاريع والأعمال على بناء هويات قوية،
+      تطوير حضورها الرقمي، وتصميم حلول وأنظمة بسيطة
+      تساعدها على إدارة أعمالها بكفاءة.
+    </p>
+
+    <div class="buttons">
+      <a class="btn btn-primary" href="#work">شاهد أعمالي</a>
+      <a class="btn btn-light" href="#contact">تواصل معي</a>
+    </div>
+
+  </div>
+
+  <div class="portrait">
+    <div class="portrait-label">
+      <strong>ALI AROH</strong>
+      <small>Creative • Digital • Systems</small>
+    </div>
+  </div>
+
+</section>
+
+
+<!-- ABOUT -->
+
+<section id="about">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-label">ABOUT ME</div>
+      <h2>من أنا؟</h2>
+    </div>
+
+    <div class="about">
+
+      <div class="about-card">
+        <strong>6+<br>YEARS</strong>
+      </div>
+
+      <div class="about-text">
+
+        <p>
+          أنا علي عروة، متخصص في تصميم وتطوير العلامات التجارية
+          والتسويق الرقمي والإعلانات البصرية وحلول إدارة الأعمال.
+        </p>
+
+        <p>
+          أعمل على تحويل الأفكار والمشكلات اليومية إلى حلول
+          واضحة وعملية، سواء من خلال الهوية البصرية أو المحتوى
+          أو الأنظمة الإدارية البسيطة المصممة حسب احتياج المشروع.
+        </p>
+
+        <p>
+          عند الحاجة إلى تطوير تقني متقدم، يمكن تنفيذ الجانب
+          البرمجي بالتعاون مع مطورين متخصصين.
+        </p>
+
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- STATS -->
+
+<section>
+  <div class="container">
+
+    <div class="stats">
+
+      <div class="stat">
+        <strong>6+</strong>
+        <span>سنوات خبرة</span>
+      </div>
+
+      <div class="stat">
+        <strong>22</strong>
+        <span>مشروع</span>
+      </div>
+
+      <div class="stat">
+        <strong>40</strong>
+        <span>علامة تجارية</span>
+      </div>
+
+      <div class="stat">
+        <strong>90</strong>
+        <span>عميل</span>
+      </div>
+
+      <div class="stat">
+        <strong>17</strong>
+        <span>نظام</span>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SERVICES -->
+
+<section id="services">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-label">SERVICES</div>
+      <h2>ماذا أقدم؟</h2>
+      <p>
+        خدمات تجمع بين التصميم والتسويق والحلول العملية لإدارة الأعمال.
+      </p>
+    </div>
+
+    <div class="services">
+
+      <div class="service">
+        <div class="service-number">01</div>
+        <h3>العلامات التجارية</h3>
+        <p>
+          تصميم وتطوير الهوية البصرية والشعارات وبناء صورة متكاملة للعلامة.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">02</div>
+        <h3>التسويق الرقمي</h3>
+        <p>
+          تطوير الحضور الرقمي وإدارة الصفحات والمحتوى والحملات التسويقية.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">03</div>
+        <h3>الإعلانات البصرية</h3>
+        <p>
+          تصميم الإعلانات والمحتوى البصري والحملات الإبداعية للمنتجات والخدمات.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">04</div>
+        <h3>أنظمة إدارة الأعمال</h3>
+        <p>
+          تصميم أنظمة بسيطة تساعد على تنظيم العملاء والمبيعات والطلبات والبيانات.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">05</div>
+        <h3>كتابة المحتوى</h3>
+        <p>
+          كتابة محتوى تسويقي وإعلاني مناسب للعلامة والجمهور المستهدف.
+        </p>
+      </div>
+
+      <div class="service">
+        <div class="service-number">06</div>
+        <h3>حلول مخصصة</h3>
+        <p>
+          دراسة احتياج المشروع واقتراح حل عملي يمكن تطويره حسب طبيعة العمل.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- WORK -->
+
+<section id="work">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-label">SELECTED WORK</div>
+      <h2>أعمال مختارة</h2>
+    </div>
+
+    <div class="projects">
+
+      <div class="project">
+        <small>PAYMENT APP</small>
+        <h3>AMDPAY</h3>
+        <p>هوية وحلول رقمية لخدمات الدفع والشحن والخدمات الرقمية.</p>
+      </div>
+
+      <div class="project">
+        <small>DIGITAL SERVICES</small>
+        <h3>ABSHER LINE</h3>
+        <p>مشروع للخدمات الرقمية والدفع والشحن.</p>
+      </div>
+
+      <div class="project">
+        <small>BRAND</small>
+        <h3>STARLINE</h3>
+        <p>تطوير الهوية والحضور البصري للعلامة.</p>
+      </div>
+
+      <div class="project">
+        <small>FINANCIAL SERVICES</small>
+        <h3>IBNHAYYAN EX</h3>
+        <p>حلول وهوية بصرية لقطاع الصرافة والتحويلات.</p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- SYSTEMS -->
+
+<section>
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-label">BUSINESS SYSTEMS</div>
+      <h2>حلول إدارة الأعمال</h2>
+      <p>
+        أنظمة بسيطة يتم تصميمها وتطويرها وفق احتياج كل مشروع.
+      </p>
+    </div>
+
+    <div class="systems">
+
+      <div class="system">نظام تسجيل العملاء</div>
+      <div class="system">نظام الفواتير</div>
+      <div class="system">نظام استقبال الطلبات</div>
+      <div class="system">نظام المبيعات والمخزون</div>
+      <div class="system">نظام الحجوزات</div>
+      <div class="system">نظام CRM</div>
+      <div class="system">نظام الشكاوى</div>
+      <div class="system">نظام الصيانة</div>
+      <div class="system">تحليل البيانات</div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- WHY -->
+
+<section>
+  <div class="container">
+
+    <div class="why">
+
+      <div class="section-label">WHY ALI AROH</div>
+
+      <h2>حلول تجمع بين الإبداع والعمل</h2>
+
+      <div class="why-grid">
+
+        <div class="why-item">
+          <h3>فهم المشروع</h3>
+          <p>
+            أبدأ بفهم طبيعة العمل والاحتياج قبل اقتراح الحل.
+          </p>
+        </div>
+
+        <div class="why-item">
+          <h3>تصميم عملي</h3>
+          <p>
+            التركيز على تصميم يخدم الهدف وليس مجرد الشكل.
+          </p>
+        </div>
+
+        <div class="why-item">
+          <h3>حلول قابلة للتطوير</h3>
+          <p>
+            إمكانية تطوير الأنظمة والحلول مع نمو المشروع.
+          </p>
+        </div>
+
+      </div>
+
+    </div>
+
+  </div>
+</section>
+
+
+<!-- CONTACT -->
+
+<section id="contact">
+  <div class="container">
+
+    <div class="section-head">
+      <div class="section-label">CONTACT</div>
+      <h2>لنعمل على مشروعك</h2>
+    </div>
+
+    <div class="contact">
+
+      <div class="contact-info">
+
+        <p>
+          لديك مشروع أو فكرة أو تحتاج إلى تطوير علامتك التجارية
+          أو تنظيم أعمالك؟ تواصل معي.
+        </p>
+
+        <div class="contact-list">
+
+          <a class="contact-item" href="mailto:desaliaroh@gmail.com">
+            desaliaroh@gmail.com
+          </a>
+
+          <a class="contact-item" href="https://wa.me/967711002011">
+            WhatsApp: 711002011
+          </a>
+
+          <div class="contact-item">
+            @aliaroh1
+          </div>
+
+        </div>
+
+        <div class="socials">
+
+          <a class="social" href="#" title="Instagram">IG</a>
+          <a class="social" href="#" title="TikTok">TK</a>
+          <a class="social" href="#" title="Facebook">FB</a>
+          <a class="social" href="#" title="X">X</a>
+          <a class="social" href="#" title="LinkedIn">in</a>
+          <a class="social" href="#" title="Behance">Be</a>
+
+        </div>
+
+      </div>
+
+
+      <form onsubmit="sendMessage(event)">
+
+        <input type="text" id="name" placeholder="الاسم" required>
+
+        <input type="email" id="email" placeholder="البريد الإلكتروني" required>
+
+        <textarea id="message" placeholder="اكتب رسالتك..." required></textarea>
+
+        <button class="btn btn-primary" type="submit">
+          إرسال عبر واتساب
+        </button>
+
+      </form>
+
+    </div>
+
+  </div>
+</section>
+
+</main>
+
+
+<footer>
+  <div class="container footer">
+    <div>© 2026 ALIAROH</div>
+    <div>تطوير علامات تجارية وحلول إدارة الأعمال</div>
+  </div>
+</footer>
+
+
+<script>
+
+function toggleTheme(){
+  document.body.classList.toggle("dark");
+}
+
+function toggleLanguage(){
+
+  const body=document.body;
+
+  if(body.getAttribute("dir")==="rtl"){
+
+    body.setAttribute("dir","ltr");
+    document.documentElement.lang="en";
+
+  }else{
+
+    body.setAttribute("dir","rtl");
+    document.documentElement.lang="ar";
+
+  }
+
+}
+
+function sendMessage(event){
+
+  event.preventDefault();
+
+  const name=document.getElementById("name").value;
+  const email=document.getElementById("email").value;
+  const message=document.getElementById("message").value;
+
+  const text=
+  "مرحباً علي عروة،%0A%0A"+
+  "الاسم: "+name+"%0A"+
+  "البريد: "+email+"%0A%0A"+
+  "الرسالة:%0A"+message;
+
+  window.open(
+    "https://wa.me/967711002011?text="+text,
+    "_blank"
+  );
+
+}
+
+</script>
+
+</body>
+  </html>
