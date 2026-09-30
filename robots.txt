@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://draliarohai-bot.github.io/sitemap.xml
