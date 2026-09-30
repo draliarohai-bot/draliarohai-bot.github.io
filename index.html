@@ -192,6 +192,133 @@ header.scrolled{opacity:1;transform:none;pointer-events:auto}
 @media(max-width:620px){header{opacity:0;pointer-events:none}.hero-photo{background-position:center 8%}.hero-orbits{left:31%;top:41%;width:53vw}.g-caption{left:20px;right:20px;bottom:8%;max-width:none}[dir="rtl"] .g-caption{left:20px;right:20px}.g-title{font-size:clamp(30px,8.6vw,48px)}.g-name{font-size:17px;margin-top:22px}.g-role{font-size:15px;max-width:88vw}.hero-rail{height:9%}}
 @media(prefers-reduced-motion:reduce){header{opacity:1;transform:none;pointer-events:auto}.orbital-shell,.math-path.p1,.math-path.p2,.math-path.p3{animation:none!important}.hero-orbits{opacity:1!important}}
 
+
+/* --- Hero composition polish v4 --- */
+.hero.hero-portrait{min-height:100svh}
+.hero-shade{
+  background:
+    linear-gradient(180deg,rgba(0,0,0,.10) 0%,rgba(0,0,0,.08) 30%,rgba(0,0,0,.30) 58%,rgba(0,0,0,.76) 100%),
+    linear-gradient(90deg,rgba(0,0,0,.38) 0%,rgba(0,0,0,.04) 48%,rgba(0,0,0,.18) 100%)
+}
+.hero-orbits{
+  left:27%;
+  top:44%;
+  width:min(24vw,300px)
+}
+.math-ring{border-width:1px}
+.math-ring.r1{opacity:.30}
+.math-ring.r2{opacity:.54}
+.math-ring.r3{opacity:.28}
+.math-ring.r4{opacity:.20}
+.g-core{width:17%;box-shadow:0 0 32px color-mix(in srgb,var(--hero-accent) 22%,transparent)}
+.math-node.ring{width:14%;height:14%}
+.math-node.small{width:5.8%;height:5.8%}
+.math-node.tiny{width:4%;height:4%}
+.g-caption{
+  left:var(--p);
+  right:auto;
+  bottom:7.5%;
+  max-width:min(760px,70vw);
+  text-align:left
+}
+[dir="rtl"] .g-caption{
+  left:auto;
+  right:var(--p);
+  text-align:right
+}
+.g-title{
+  font-size:clamp(28px,3.7vw,54px);
+  line-height:1.15;
+  letter-spacing:-.025em;
+  white-space:nowrap;
+  text-wrap:nowrap
+}
+.g-name{
+  margin-top:20px;
+  font-size:clamp(16px,1.45vw,22px);
+  letter-spacing:.105em;
+  line-height:1.35
+}
+.g-role{
+  margin-top:8px;
+  font-size:clamp(13px,1.15vw,17px);
+  line-height:1.75;
+  color:rgba(255,255,255,.68);
+  max-width:600px
+}
+.hero-rail{opacity:.72}
+@media(max-width:900px){
+  .hero-orbits{left:25%;top:44%;width:min(34vw,260px)}
+  .g-caption{max-width:72vw;bottom:7%}
+}
+@media(max-width:620px){
+  .hero-photo{
+    background-position:center 7%;
+    filter:grayscale(1) saturate(0) contrast(1.18) brightness(.66)
+  }
+  .hero-shade{
+    background:
+      linear-gradient(180deg,rgba(0,0,0,.06) 0%,rgba(0,0,0,.03) 32%,rgba(0,0,0,.28) 58%,rgba(0,0,0,.86) 100%),
+      linear-gradient(90deg,rgba(0,0,0,.26) 0%,rgba(0,0,0,.02) 58%,rgba(0,0,0,.15) 100%)
+  }
+  .hero-orbits{
+    left:24%;
+    top:43%;
+    width:40vw;
+    max-width:168px
+  }
+  .math-ring.r1{opacity:.25}
+  .math-ring.r2{opacity:.48}
+  .math-ring.r3{opacity:.24}
+  .math-ring.r4{opacity:.18}
+  .g-core{width:16.5%}
+  .math-node.ring{width:13.5%;height:13.5%}
+  .math-node.small{width:5.5%;height:5.5%}
+  .math-node.tiny{width:3.8%;height:3.8%}
+  .g-caption{
+    left:22px;
+    right:22px;
+    bottom:6.8%;
+    max-width:none;
+    text-align:left
+  }
+  [dir="rtl"] .g-caption{
+    left:22px;
+    right:22px;
+    text-align:right
+  }
+  .g-title{
+    font-size:clamp(22px,6.1vw,30px);
+    line-height:1.2;
+    letter-spacing:0;
+    white-space:nowrap;
+    overflow:visible
+  }
+  .g-name{
+    margin-top:18px;
+    font-size:14px;
+    letter-spacing:.08em;
+    line-height:1.35
+  }
+  .g-role{
+    margin-top:7px;
+    max-width:100%;
+    font-size:12.5px;
+    line-height:1.65;
+    color:rgba(255,255,255,.70)
+  }
+  .hero-rail{
+    height:7.5%;
+    opacity:.55
+  }
+}
+@media(max-width:390px){
+  .hero-orbits{left:23%;top:43.5%;width:38vw;max-width:150px}
+  .g-title{font-size:21px}
+  .g-name{font-size:13px}
+  .g-role{font-size:11.5px}
+}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Ali Aroh","alternateName":["علي عروة","ALIAROH"],"description":"Brand Development & Business Management Solutions","url":"https://draliarohai-botgithubio.vercel.app/"}}</script>
 </head>
