@@ -193,6 +193,48 @@ header.scrolled{opacity:1;transform:none;pointer-events:auto}
 @media(prefers-reduced-motion:reduce){header{opacity:1;transform:none;pointer-events:auto}.orbital-shell,.math-path.p1,.math-path.p2,.math-path.p3{animation:none!important}.hero-orbits{opacity:1!important}}
 
 
+
+/* --- Restore original hero typography hierarchy --- */
+.hero-original-copy{padding:0;display:block}
+.hero-copy-original{position:absolute;inset:0;z-index:5;padding:clamp(90px,10vh,130px) var(--p) clamp(34px,5vh,58px);display:grid;grid-template-rows:auto 1fr auto;pointer-events:none}
+.hero-eyebrow-original{align-self:start;max-width:420px;font-size:10px;line-height:1.7;letter-spacing:.13em;text-transform:uppercase;color:rgba(255,255,255,.72);display:flex;align-items:center;gap:10px}
+.hero-eyebrow-original:before{content:"";width:7px;height:7px;border-radius:50%;background:var(--hero-accent);box-shadow:0 0 18px color-mix(in srgb,var(--hero-accent) 45%,transparent);flex:0 0 auto}
+.hero-name-block{align-self:center;position:relative;z-index:2}
+.hero-name-block h1{margin:0;font-size:clamp(72px,15.2vw,235px);line-height:.78;letter-spacing:-.083em;font-weight:800;white-space:nowrap;text-shadow:0 8px 34px rgba(0,0,0,.32)}
+.hero-arabic-original{margin-top:clamp(18px,2.6vw,34px);font-size:clamp(32px,5vw,70px);font-weight:600;line-height:1.15;letter-spacing:-.035em;text-shadow:0 5px 22px rgba(0,0,0,.34)}
+.hero-bottom-original{align-self:end;display:grid;grid-template-columns:minmax(0,680px) auto;gap:28px;align-items:end;border-top:1px solid rgba(255,255,255,.18);padding-top:18px}
+.hero-bottom-original p{margin:0;font-size:clamp(14px,1.35vw,19px);line-height:1.85;color:rgba(255,255,255,.74);text-shadow:0 4px 18px rgba(0,0,0,.45)}
+.hero-actions-original{display:flex;gap:10px;pointer-events:auto}
+.hero-orbits--decorative{z-index:3;left:25%;top:43%;width:min(21vw,270px);opacity:.78}
+.hero-orbits--decorative .math-ring{opacity:.22}
+.hero-orbits--decorative .math-ring.r2{opacity:.38}
+.hero-orbits--decorative .math-ring.r3{opacity:.20}
+.hero-orbits--decorative .math-ring.r4{opacity:.15}
+.hero-orbits--decorative .g-core{width:15%}
+.hero-orbits--decorative .math-node.ring{width:12%;height:12%}
+.hero-orbits--decorative .math-node.small{width:5%;height:5%}
+.hero-orbits--decorative .math-node.tiny{width:3.5%;height:3.5%}
+@media(max-width:900px){
+  .hero-copy-original{padding-top:92px}
+  .hero-name-block h1{font-size:clamp(70px,15vw,135px)}
+  .hero-bottom-original{grid-template-columns:1fr}
+  .hero-actions-original{justify-self:start}
+  .hero-orbits--decorative{left:23%;top:42%;width:min(32vw,230px)}
+}
+@media(max-width:620px){
+  .hero-copy-original{padding:82px 20px 28px;grid-template-rows:auto 1fr auto}
+  .hero-eyebrow-original{max-width:240px;font-size:8.5px;line-height:1.55}
+  .hero-name-block{align-self:center;margin-top:5vh}
+  .hero-name-block h1{font-size:clamp(64px,20vw,96px);line-height:.82;white-space:normal;max-width:94%}
+  .hero-arabic-original{margin-top:16px;font-size:34px;line-height:1.2}
+  .hero-bottom-original{display:grid;grid-template-columns:1fr;gap:16px;padding-top:14px}
+  .hero-bottom-original p{font-size:13px;line-height:1.7;max-width:95%}
+  .hero-actions-original{display:grid;grid-template-columns:1fr 1fr;width:100%;gap:8px}
+  .hero-actions-original .btn{min-height:45px;font-size:11px;padding:0 12px}
+  .hero-orbits--decorative{left:22%;top:42%;width:34vw;max-width:142px;opacity:.62}
+  .hero-rail{height:6.5%}
+}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Ali Aroh","alternateName":["علي عروة","ALIAROH"],"description":"Brand Development & Business Management Solutions","url":"https://draliarohai-botgithubio.vercel.app/"}}</script>
 </head>
@@ -200,11 +242,11 @@ header.scrolled{opacity:1;transform:none;pointer-events:auto}
 <header id="hdr"><a class="logo" href="#home">ALIAROH<i>.</i></a><nav class="desktop"><a href="#home"><span class="ar">الرئيسية</span><span class="en">Home</span></a><a href="#about"><span class="ar">من أنا</span><span class="en">About</span></a><a href="#services"><span class="ar">خدماتي</span><span class="en">Services</span></a><a href="#work"><span class="ar">أعمالي</span><span class="en">Work</span></a><a href="#experience"><span class="ar">خبراتي</span><span class="en">Experience</span></a><a href="#contact"><span class="ar">تواصل معي</span><span class="en">Contact</span></a></nav><div class="actions"><button class="lang" id="lang">EN</button><button class="menu" id="menu"><span class="ar">القائمة</span><span class="en">Menu</span></button></div></header>
 <div class="mobile" id="mobile"><a href="#home"><small>01</small><span class="ar">الرئيسية</span><span class="en">Home</span></a><a href="#about"><small>02</small><span class="ar">من أنا</span><span class="en">About</span></a><a href="#services"><small>03</small><span class="ar">خدماتي</span><span class="en">Services</span></a><a href="#work"><small>04</small><span class="ar">أعمالي</span><span class="en">Work</span></a><a href="#experience"><small>05</small><span class="ar">خبراتي</span><span class="en">Experience</span></a><a href="#contact"><small>06</small><span class="ar">تواصل معي</span><span class="en">Contact</span></a></div>
 <main>
-<section class="hero hero-portrait" id="home" aria-label="ALIAROH interactive introduction">
-  <button class="hero-click-zone" id="heroClick" type="button" aria-label="Change visual theme"></button>
+<section class="hero hero-portrait hero-original-copy" id="home" aria-labelledby="hero-title">
   <div class="hero-photo" aria-hidden="true"></div>
   <div class="hero-shade" aria-hidden="true"></div>
-  <div class="hero-orbits" id="heroOrbits" aria-hidden="true">
+
+  <div class="hero-orbits hero-orbits--decorative" id="heroOrbits" aria-hidden="true">
     <div class="orbital-shell">
       <span class="math-ring r1"></span>
       <span class="math-ring r2"></span>
@@ -216,11 +258,30 @@ header.scrolled{opacity:1;transform:none;pointer-events:auto}
       <span class="math-path p3"><i class="math-node tiny"></i></span>
     </div>
   </div>
-  <div class="g-caption" id="heroCaption">
-    <h1 class="g-title" id="kineticTitle">brand · strategy · systems</h1>
-    <div class="g-name">ALI AROH / علي عروة</div>
-    <div class="g-role"><span class="ar">تطوير العلامات التجارية · التسويق الرقمي · حلول إدارة الأعمال</span><span class="en">Brand development · digital marketing · business management solutions</span></div>
+
+  <div class="hero-copy-original">
+    <div class="hero-eyebrow-original">
+      <span class="ar">تطوير علامات تجارية وحلول إدارة الأعمال</span>
+      <span class="en">Brand Development & Business Management Solutions</span>
+    </div>
+
+    <div class="hero-name-block">
+      <h1 id="hero-title">ALI AROH</h1>
+      <div class="hero-arabic-original">علي عروة</div>
+    </div>
+
+    <div class="hero-bottom-original">
+      <p>
+        <span class="ar">أساعد المشاريع والأعمال على بناء حضور احترافي، تطوير علامتها التجارية، تحسين تسويقها، وتنظيم أعمالها من خلال حلول رقمية عملية ومتكاملة.</span>
+        <span class="en">I help businesses build stronger brands, improve their digital presence, strengthen their marketing, and organize their operations through practical digital solutions.</span>
+      </p>
+      <div class="hero-actions-original">
+        <a class="btn primary" href="#work"><span class="ar">استكشف أعمالي</span><span class="en">Explore My Work</span> ↗</a>
+        <a class="btn" href="#contact"><span class="ar">تواصل معي</span><span class="en">Contact Me</span> ↗</a>
+      </div>
+    </div>
   </div>
+
   <div class="hero-rail" aria-hidden="true"></div>
 </section>
 <section class="sec dark statement"><p data-reveal><span class="ar">أحوّل الأفكار إلى علامات تجارية واضحة، وتجارب رقمية عملية، وحلول تساعد الأعمال على النمو والعمل بكفاءة أكبر.</span><span class="en">I turn ideas into clear brands, practical digital experiences, and solutions that help businesses grow and operate more efficiently.</span></p></section>
@@ -247,43 +308,25 @@ header.scrolled{opacity:1;transform:none;pointer-events:auto}
 <footer><div class="foot-brand">ALIAROH<i>.</i></div><div class="foot-copy"><span class="ar">علي عروة<br>تطوير علامات تجارية وحلول إدارة الأعمال</span><span class="en">ALI AROH<br>Brand Development & Business Management Solutions</span></div><div class="copy">© 2026 ALIAROH. <span class="ar">جميع الحقوق محفوظة.</span><span class="en">All Rights Reserved.</span></div></footer>
 <dialog id="dlg"><div class="dlg"><button class="close" id="close">×</button><small id="dcat"></small><h2 id="dname"></h2><p id="ddesc"></p><div class="chips" id="chips"></div><div class="dlggrid"><div class="box"><small>01</small><h3><span class="ar">نظرة عامة</span><span class="en">Overview</span></h3><p id="overview"></p></div><div class="box"><small>02</small><h3><span class="ar">التحدي</span><span class="en">Challenge</span></h3><p class="placeholder"></p></div><div class="box"><small>03</small><h3><span class="ar">المنهج</span><span class="en">Approach</span></h3><p class="placeholder"></p></div><div class="box"><small>04</small><h3><span class="ar">النتيجة</span><span class="en">Outcome</span></h3><p class="placeholder"></p></div></div></div></dialog>
 <script>
-var CONFIG={email:"your@email.com",whatsapp:""};var lang=localStorage.getItem("aliaroh-lang")==="en"?"en":"ar";function setLang(v){lang=v;localStorage.setItem("aliaroh-lang",v);document.documentElement.lang=v;document.documentElement.dir=v==="ar"?"rtl":"ltr";document.body.classList.toggle("is-en",v==="en");document.getElementById("lang").textContent=v==="ar"?"EN":"AR"}setLang(lang);document.getElementById("lang").onclick=function(){setLang(lang==="ar"?"en":"ar");if(typeof applyHeroTheme==="function")applyHeroTheme(heroThemeIndex)};
+var CONFIG={email:"your@email.com",whatsapp:""};var lang=localStorage.getItem("aliaroh-lang")==="en"?"en":"ar";function setLang(v){lang=v;localStorage.setItem("aliaroh-lang",v);document.documentElement.lang=v;document.documentElement.dir=v==="ar"?"rtl":"ltr";document.body.classList.toggle("is-en",v==="en");document.getElementById("lang").textContent=v==="ar"?"EN":"AR"}setLang(lang);document.getElementById("lang").onclick=function(){setLang(lang==="ar"?"en":"ar")};
 var hdr=document.getElementById("hdr");addEventListener("scroll",function(){hdr.classList.toggle("scrolled",scrollY>25)},{passive:true});var menu=document.getElementById("menu"),mobile=document.getElementById("mobile");menu.onclick=function(){mobile.classList.toggle("open")};mobile.querySelectorAll("a").forEach(function(a){a.onclick=function(){mobile.classList.remove("open")}});
 var reduce=matchMedia("(prefers-reduced-motion:reduce)").matches;var obs=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add("show");obs.unobserve(e.target)}})},{threshold:.12});document.querySelectorAll("[data-reveal]").forEach(function(e){if(reduce)e.classList.add("show");else obs.observe(e)});
 document.querySelectorAll("[data-count]").forEach(function(el){var n=+el.dataset.count,done=false,o=new IntersectionObserver(function(es){if(es[0].isIntersecting&&!done){done=true;var st=performance.now();function f(t){var p=Math.min(1,(t-st)/800);el.textContent=Math.round(n*(1-Math.pow(1-p,3)))+"+";if(p<1)requestAnimationFrame(f)}requestAnimationFrame(f);o.disconnect()}},{threshold:.5});o.observe(el)});
 var cur=document.querySelector(".cursor");if(cur&&matchMedia("(pointer:fine)").matches&&!reduce){addEventListener("mousemove",function(e){cur.style.transform="translate3d("+e.clientX+"px,"+e.clientY+"px,0)"},{passive:true});addEventListener("mouseover",function(e){cur.classList.toggle("big",!!e.target.closest("a,button,summary"))},{passive:true})}
 var dlg=document.getElementById("dlg");document.querySelectorAll(".open-project").forEach(function(b){b.onclick=function(){document.getElementById("dname").textContent=b.dataset["name"+(lang==="ar"?"Ar":"En")];document.getElementById("dcat").textContent=b.dataset["cat"+(lang==="ar"?"Ar":"En")]+" · 2026";document.getElementById("ddesc").textContent=b.dataset["desc"+(lang==="ar"?"Ar":"En")];document.getElementById("overview").textContent=b.dataset["desc"+(lang==="ar"?"Ar":"En")];var ph=lang==="ar"?"تفاصيل المشروع ستضاف لاحقًا.":"Project details will be added later.";document.querySelectorAll(".placeholder").forEach(function(x){x.textContent=ph});document.getElementById("chips").innerHTML=b.dataset.services.split("|").map(function(x){return"<span>"+x+"</span>"}).join("");dlg.showModal()}});document.getElementById("close").onclick=function(){dlg.close()};dlg.onclick=function(e){if(e.target===dlg)dlg.close()};
 
-var hero=document.getElementById("home"),heroClick=document.getElementById("heroClick"),heroOrbits=document.getElementById("heroOrbits"),heroCaption=document.getElementById("heroCaption"),kineticTitle=document.getElementById("kineticTitle");
-var heroThemes=[
- {c:"#caa81e",ar:"هوية · استراتيجية · أنظمة",en:"brand · strategy · systems"},
- {c:"#a56cf5",ar:"فكرة · تصميم · تجربة",en:"concept · design · experience"},
- {c:"#91b8da",ar:"رقمي · تسويق · نمو",en:"digital · marketing · growth"},
- {c:"#ff7a1a",ar:"إبداع · إعلان · تأثير",en:"creative · advertising · impact"},
- {c:"#20d7ff",ar:"تقنية · أتمتة · ذكاء",en:"technology · automation · ai"}
-],heroThemeIndex=0;
-function applyHeroTheme(i){
- heroThemeIndex=(i+heroThemes.length)%heroThemes.length;
- var t=heroThemes[heroThemeIndex];
- hero.style.setProperty("--hero-accent",t.c);
- kineticTitle.classList.add("swap");
- setTimeout(function(){kineticTitle.textContent=lang==="ar"?t.ar:t.en;kineticTitle.classList.remove("swap")},150);
-}
-heroClick.addEventListener("click",function(){applyHeroTheme(heroThemeIndex+1)});
-heroClick.addEventListener("keydown",function(e){if(e.key==="Enter"||e.key===" "){e.preventDefault();applyHeroTheme(heroThemeIndex+1)}});
+var hero=document.getElementById("home"),heroOrbits=document.getElementById("heroOrbits");
 var heroTick=false;
 function updateHeroScroll(){
  heroTick=false;
- if(reduce||!heroOrbits)return;
- var r=hero.getBoundingClientRect(),p=Math.max(0,Math.min(1,-r.top/(Math.max(1,hero.offsetHeight*.72))));
- heroOrbits.style.transform="translate(-50%,-50%) translate3d("+(-p*42)+"vw,"+(p*8)+"vh,0) scale("+(1-p*.2)+") rotate("+(-p*32)+"deg)";
- heroOrbits.style.opacity=String(Math.max(0,1-p*1.18));
- heroCaption.style.transform="translate3d(0,"+(-p*65)+"px,0)";
- heroCaption.style.opacity=String(Math.max(0,1-p*1.2));
+ if(reduce||!heroOrbits||!hero)return;
+ var r=hero.getBoundingClientRect(),p=Math.max(0,Math.min(1,-r.top/(Math.max(1,hero.offsetHeight*.75))));
+ heroOrbits.style.transform="translate(-50%,-50%) translate3d("+(-p*28)+"vw,"+(-p*5)+"vh,0) scale("+(1-p*.16)+") rotate("+(p*24)+"deg)";
+ heroOrbits.style.opacity=String(Math.max(0,0.78-p*.95));
 }
 addEventListener("scroll",function(){if(!heroTick){heroTick=true;requestAnimationFrame(updateHeroScroll)}},{passive:true});
 addEventListener("resize",updateHeroScroll,{passive:true});
-applyHeroTheme(heroThemeIndex);updateHeroScroll();
+updateHeroScroll();
 
 document.getElementById("emailBtn").href="mailto:"+CONFIG.email;document.getElementById("projectBtn").href="mailto:"+CONFIG.email+"?subject=New%20Project";document.getElementById("emailText").textContent=CONFIG.email;if(CONFIG.whatsapp)document.getElementById("wa").innerHTML='<a href="'+CONFIG.whatsapp+'" target="_blank" rel="noreferrer">WhatsApp ↗</a>';
 </script>
