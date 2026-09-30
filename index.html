@@ -235,6 +235,60 @@ header.scrolled{opacity:1;transform:none;pointer-events:auto}
   .hero-rail{height:6.5%}
 }
 
+
+/* --- Reference-matched entrance sequence v5 --- */
+.hero-original-copy{--hero-accent:#a56cf5}
+.hero-original-copy .hero-photo,
+.hero-original-copy .hero-shade{
+  opacity:0;
+  transition:opacity .28s linear
+}
+.hero-original-copy .hero-orbits--decorative{
+  opacity:0!important;
+  transition:opacity .08s linear;
+  transform:translate(-50%,-50%)!important
+}
+.hero-original-copy .orbital-shell{
+  animation:none!important;
+  opacity:1!important;
+  transform:none!important
+}
+.hero-original-copy .math-path{
+  opacity:0!important;
+  animation:none!important
+}
+.hero-original-copy .hero-copy-original,
+.hero-original-copy .hero-rail{
+  opacity:0;
+  transition:opacity .24s ease-out
+}
+.hero-original-copy.hero-seq-geometry .hero-orbits--decorative{
+  opacity:.72!important
+}
+.hero-original-copy.hero-seq-photo .hero-photo,
+.hero-original-copy.hero-seq-photo .hero-shade{
+  opacity:1
+}
+.hero-original-copy.hero-seq-copy .hero-copy-original,
+.hero-original-copy.hero-seq-copy .hero-rail{
+  opacity:1
+}
+@media(max-width:620px){
+  .hero-original-copy .hero-photo{
+    background-position:35% 8%
+  }
+}
+@media(prefers-reduced-motion:reduce){
+  .hero-original-copy .hero-photo,
+  .hero-original-copy .hero-shade,
+  .hero-original-copy .hero-orbits--decorative,
+  .hero-original-copy .hero-copy-original,
+  .hero-original-copy .hero-rail{
+    opacity:1!important;
+    transition:none!important
+  }
+}
+
 </style>
 <script type="application/ld+json">{"@context":"https://schema.org","@type":"ProfilePage","mainEntity":{"@type":"Person","name":"Ali Aroh","alternateName":["علي عروة","ALIAROH"],"description":"Brand Development & Business Management Solutions","url":"https://draliarohai-botgithubio.vercel.app/"}}</script>
 </head>
@@ -316,17 +370,27 @@ var cur=document.querySelector(".cursor");if(cur&&matchMedia("(pointer:fine)").m
 var dlg=document.getElementById("dlg");document.querySelectorAll(".open-project").forEach(function(b){b.onclick=function(){document.getElementById("dname").textContent=b.dataset["name"+(lang==="ar"?"Ar":"En")];document.getElementById("dcat").textContent=b.dataset["cat"+(lang==="ar"?"Ar":"En")]+" · 2026";document.getElementById("ddesc").textContent=b.dataset["desc"+(lang==="ar"?"Ar":"En")];document.getElementById("overview").textContent=b.dataset["desc"+(lang==="ar"?"Ar":"En")];var ph=lang==="ar"?"تفاصيل المشروع ستضاف لاحقًا.":"Project details will be added later.";document.querySelectorAll(".placeholder").forEach(function(x){x.textContent=ph});document.getElementById("chips").innerHTML=b.dataset.services.split("|").map(function(x){return"<span>"+x+"</span>"}).join("");dlg.showModal()}});document.getElementById("close").onclick=function(){dlg.close()};dlg.onclick=function(e){if(e.target===dlg)dlg.close()};
 
 var hero=document.getElementById("home"),heroOrbits=document.getElementById("heroOrbits");
-var heroTick=false;
+var heroTick=false,heroIntroDone=false;
 function updateHeroScroll(){
  heroTick=false;
- if(reduce||!heroOrbits||!hero)return;
+ if(reduce||!heroOrbits||!hero||!heroIntroDone)return;
  var r=hero.getBoundingClientRect(),p=Math.max(0,Math.min(1,-r.top/(Math.max(1,hero.offsetHeight*.75))));
  heroOrbits.style.transform="translate(-50%,-50%) translate3d("+(-p*28)+"vw,"+(-p*5)+"vh,0) scale("+(1-p*.16)+") rotate("+(p*24)+"deg)";
- heroOrbits.style.opacity=String(Math.max(0,0.78-p*.95));
+ heroOrbits.style.opacity=String(Math.max(0,.72-p*.90));
 }
-addEventListener("scroll",function(){if(!heroTick){heroTick=true;requestAnimationFrame(updateHeroScroll)}},{passive:true});
-addEventListener("resize",updateHeroScroll,{passive:true});
-updateHeroScroll();
+if(hero){
+ if(reduce){
+   hero.classList.add("hero-seq-geometry","hero-seq-photo","hero-seq-copy");
+   heroIntroDone=true;
+ }else{
+   setTimeout(function(){hero.classList.add("hero-seq-geometry")},300);
+   setTimeout(function(){hero.classList.add("hero-seq-photo")},1050);
+   setTimeout(function(){hero.classList.add("hero-seq-copy")},1220);
+   setTimeout(function(){heroIntroDone=true;updateHeroScroll()},1480);
+ }
+}
+addEventListener("scroll",function(){if(heroIntroDone&&!heroTick){heroTick=true;requestAnimationFrame(updateHeroScroll)}},{passive:true});
+addEventListener("resize",function(){if(heroIntroDone)updateHeroScroll()},{passive:true});
 
 document.getElementById("emailBtn").href="mailto:"+CONFIG.email;document.getElementById("projectBtn").href="mailto:"+CONFIG.email+"?subject=New%20Project";document.getElementById("emailText").textContent=CONFIG.email;if(CONFIG.whatsapp)document.getElementById("wa").innerHTML='<a href="'+CONFIG.whatsapp+'" target="_blank" rel="noreferrer">WhatsApp ↗</a>';
 </script>
