@@ -117,7 +117,7 @@ display:block;position:relative;overflow:hidden;isolation:isolate}
 .g-hint:before{content:"";width:5px;height:5px;border-radius:50%;background:var(--hero-accent);box-shadow:0 0 18px var(--hero-accent);transition:background .45s ease}
 .hero-rail{position:absolute;z-index:2;left:50%;bottom:0;width:1px;height:17%;background:rgba(255,255,255,.2)}
 .hero-rail:before{content:"";position:absolute;top:0;left:50%;width:8px;height:8px;border-radius:50%;background:var(--w);transform:translate(-50%,-50%)}
-.hero-click-zone{position:absolute;inset:0;z-index:4;cursor:pointer}
+.hero-click-zone{position:absolute;inset:0;z-index:4;cursor:pointer;border:0;background:transparent;padding:0;margin:0;-webkit-tap-highlight-color:transparent}
 .hero-click-zone:focus-visible{outline:1px solid var(--hero-accent);outline-offset:-4px}
 .hero > :not(.hero-click-zone){pointer-events:none}
 .hero-brand,.hero-contact,.g-caption,.g-hint{pointer-events:none}
@@ -240,7 +240,7 @@ function updateHeroScroll(){
 }
 addEventListener("scroll",function(){if(!heroTick){heroTick=true;requestAnimationFrame(updateHeroScroll)}},{passive:true});
 addEventListener("resize",updateHeroScroll,{passive:true});
-updateHeroScroll();
+applyHeroTheme(heroThemeIndex);updateHeroScroll();
 
 document.getElementById("emailBtn").href="mailto:"+CONFIG.email;document.getElementById("projectBtn").href="mailto:"+CONFIG.email+"?subject=New%20Project";document.getElementById("emailText").textContent=CONFIG.email;if(CONFIG.whatsapp)document.getElementById("wa").innerHTML='<a href="'+CONFIG.whatsapp+'" target="_blank" rel="noreferrer">WhatsApp ↗</a>';
 </script>
